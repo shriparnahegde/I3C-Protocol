@@ -1,9 +1,11 @@
 #MIPI I3C Master Controller
+
 This repository houses the complete RTL implementation and protocol-level verification of a Modular MIPI I3C Master Controller. As modern System-on-Chip (SoC) architectures demand higher sensor density, legacy protocols like I2C and SPI often struggle with bandwidth limitations and high pin counts. This project provides a scalable, high-speed, and power-efficient hardware solution tailored for next-generation embedded systems.
 
 Designed with a strong emphasis on maintainable VLSI practices, the architecture avoids the pitfalls of monolithic state machines. Instead, it utilizes a strictly layered, synchronous Finite State Machine (FSM) framework. This modular methodology cleanly decouples the command interpretation layer from the physical bit-level transmission engine. The result is a synthesizable, deterministically timed controller that easily scales for future complex SoC integration.
 
-Key Hardware Features
+Key Hardware Features:
+
 1.Dynamic Physical Layer: Precise, run-time transitions between Open-Drain (for arbitration) and Push-Pull (for high-speed data) signaling without bus contention.
 
 2.Dynamic Address Assignment (ENTDAA): Automated multi-target arbitration and dynamic address allocation, eliminating legacy static address conflicts.
